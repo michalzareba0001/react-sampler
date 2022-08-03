@@ -1,15 +1,58 @@
 import './App.css';
 import SoundPad from './sound-pad';
+import useSound from 'use-sound';
 
 function App() {
+  
+  const renderSoundPad = (i) => {
+
+    return <SoundPad value={i} />;
+  }
+
+ 
+
   return (
       <div className="App-body">
       <header className="App-header">
-        <h1>This will be a simple sampler app</h1>
+        <h1>8-bit Sound Sampler</h1>
       </header>
       <div className="App-main">
-        <SoundPad /> <SoundPad /> <SoundPad /> <SoundPad /> <SoundPad />
-
+      <div className="PadsRow">
+       {renderSoundPad(1)}
+       {renderSoundPad(2)}
+       {renderSoundPad(3)}
+       {renderSoundPad(4)}
+       {renderSoundPad(5)}
+      </div>
+      <div className="PadsRow">
+       {renderSoundPad(6)}
+       {renderSoundPad(7)}
+       {renderSoundPad(8)}
+       {renderSoundPad(9)}
+       {renderSoundPad(10)}
+      </div>
+      <div className="PadsRow">
+       {renderSoundPad(11)}
+       {renderSoundPad(12)}
+       {renderSoundPad(13)}
+       {renderSoundPad(14)}
+       {renderSoundPad(15)}
+      </div>
+      <div className="PadsRow">
+       {renderSoundPad(16)}
+       {renderSoundPad(17)}
+       {renderSoundPad(18)}
+       {renderSoundPad(19)}
+       {renderSoundPad(20)}
+      </div>
+      <div className="PadsRow">
+       {renderSoundPad(21)}
+       {renderSoundPad(22)}
+       {renderSoundPad(23)}
+       {renderSoundPad(24)}
+       {renderSoundPad(25)}
+      </div>
+      
       </div>
       </div>
   );
