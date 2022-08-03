@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import './soundpad.css';
+import useSound from "use-sound"; 
+import play from "use-sound";
 import sample0 from "./sounds/sample0.wav";
 import sample1 from "./sounds/sample1.wav";
 import sample2 from "./sounds/sample2.wav";
