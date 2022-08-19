@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import './soundpad.css';
-import useSound from "use-sound";
 import sample0 from "./sounds/sample0.wav";
 import sample1 from "./sounds/sample1.wav";
 import sample2 from "./sounds/sample2.wav";
@@ -27,21 +26,28 @@ import sample22 from "./sounds/sample22.wav";
 import sample23 from "./sounds/sample23.wav";
 import sample24 from "./sounds/sample24.wav";
 
-const AsignSounds = () => {
+
 const AllButtons = document.getElementsByClassName("sound-pad");
 const AllSamples = [sample0, sample1, sample2, sample3, sample4, sample5, sample6, sample7, sample8, sample9, sample10, sample11, sample12, sample13, sample14, sample15, sample16, sample17, sample18, sample19, sample20, sample21, sample22, sample23, sample24];
-for (let i = 0; i < AllButtons.length; i++) {
-  AllButtons[i].addEventListener("click", function() {
-    const sound = new Audio(AllSamples[i]);
-    sound.play();
+ 
+
+const PlaySound = () => {
+  for (let i = 0; i < AllButtons.length; i++) {
+    AllButtons[i].addEventListener("click", function() {
+  const sound = new Audio(AllSamples[i]);
+  sound.play();
+    });
+
+
   }
-  ) 
+
 }
-}
+
+
 
 const SoundPad = () => {
 
-  return <button className="sound-pad" onClick={AsignSounds}>
+  return <button className="sound-pad" onClick={PlaySound}>
   </button>;
 }
 
